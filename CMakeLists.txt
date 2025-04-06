@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.24)
+project(Arduino)
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/ArduinoToolchain.cmake)
+set(CMAKE_CXX_STANDARD 14)
+set (${CMAKE_PROJECT_NAME}_BOARD uno)
+set (${CMAKE_PROJECT_NAME}_PORT / dev/ttyUSB0)
+set (${CMAKE_PROJECT_NAME}_SKETCH arduino.ino)
+generate_arduino_firmware(${CMAKE_PROJECT_NAME})
