@@ -1,6 +1,8 @@
-# Elegoo Lesson 4
+# RGB LED
 
-## Overview
+## Elegoo Lesson 4
+
+### Overview
 
 RGB LEDs are a fun and easy way to add some color to your projects. Since they are
 like 3 regular LEDs in one, how to use and connect them is not much different.
@@ -23,7 +25,7 @@ through most of the color that can be achieved.
 * (1) x RGB LED
 * (3) x 220 ohm resistors
 
-## Component Introduction
+### Component Introduction
 
 RGB:
 At first glance, RGB (Red, Green and Blue) LEDs look just like regular LEDs. However,
@@ -42,7 +44,7 @@ The RGB LED has four leads. There is one lead going to the positive connection o
 each of the single LEDs within the package and a single lead that is connected to all
 three negative sides of the LEDs.
 
-![led](../notes/lesson_4/lesson_4.1.png)
+![led](lesson_4.1.png)
 
 Here on the photographs you can see 4 electrode LED. Every separate pin for Green
 or Blue or Red color is called Anode. You will always connect “+” to it.
@@ -59,4 +61,4 @@ and one blue) are connected to UNO output pins using these resistors.
 
 ### Wiring Diagram
 
-![wiring diagram](../notes/lesson_4/lesson_4.2.png)
+![wiring diagram](lesson_4.2.png)

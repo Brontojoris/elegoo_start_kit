@@ -1,14 +1,16 @@
-# Elegoo Lesson 1
+# Blink
+
+## Elegoo Lesson 2
 
 The UNO is a convenient source of 5 volts, which we will use to provide power to
-the LED and the resistor. 
+the LED and the resistor.
 
 You do not need to do anything with your UNO, except to
 plug it into a USB cable.
 
 With the 220 Ω resistor in place, the LED should be quite bright. If you swap out the
 220 Ω resistor for the 1kΩ resistor, then the LED will appear a little dimmer. Finally,
-with the 10 kΩ resistor in place, the LED will be just about visible. 
+with the 10 kΩ resistor in place, the LED will be just about visible.
 
 Pull the red jumper
 lead out of the breadboard and touch it into the hole and remove it, so that it acts
@@ -23,4 +25,4 @@ You will probably want to put the 220Ω resistor back in place.
 It does not matter which side of the LED we put the resistor, as long as it is there
 somewhere
 
-![elegoo_lesson_1.png](elegoo_lesson_1.png)
+![elegoo_lesson_1.png](elegoo_lesson_2.png)
