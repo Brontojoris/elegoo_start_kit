@@ -42,7 +42,7 @@ The RGB LED has four leads. There is one lead going to the positive connection o
 each of the single LEDs within the package and a single lead that is connected to all
 three negative sides of the LEDs.
 
-![led](lesson_4.1.png)
+![led](../notes/lesson_4/lesson_4.1.png)
 
 Here on the photographs you can see 4 electrode LED. Every separate pin for Green
 or Blue or Red color is called Anode. You will always connect “+” to it.
@@ -59,4 +59,4 @@ and one blue) are connected to UNO output pins using these resistors.
 
 ### Wiring Diagram
 
-![wiring diagram](lesson_4.2.png)
+![wiring diagram](../notes/lesson_4/lesson_4.2.png)
