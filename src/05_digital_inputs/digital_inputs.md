@@ -96,4 +96,4 @@ Similarly, if button B is pressed, a LOW is written to the ledPin.
 
 ## Results
 
-<video src="digital_inputs.mp4" width="640" height="360" controls></video>
+![proof](digital_inputs.mp4)
