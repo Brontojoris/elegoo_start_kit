@@ -1,4 +1,4 @@
-# Active Buzzer
+# Passive Buzzer
 
 ## Elegoo Lesson 7
 
