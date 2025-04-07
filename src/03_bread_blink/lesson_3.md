@@ -29,4 +29,4 @@ You will probably want to put the 220Ω resistor back in place.
 It does not matter which side of the LED we put the resistor, as long as it is there
 somewhere
 
-![elegoo_lesson_1.png](lesson_3.png)
+![blink](lesson_3.png)

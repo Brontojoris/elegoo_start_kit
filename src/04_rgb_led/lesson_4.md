@@ -2,7 +2,7 @@
 
 ## Elegoo Lesson 4
 
-[Uno Starter Kit.pdf > Page 5](../../docs/UNO%20Starter%20Kit.pdf)
+[Uno Starter Kit.pdf > Page 50](../../docs/UNO%20Starter%20Kit.pdf)
 
 ### Overview
 
