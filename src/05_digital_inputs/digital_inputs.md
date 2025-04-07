@@ -1,6 +1,8 @@
 # Digital Inputs
 
-## Lesson 5
+## Elegoo Lesson 5
+
+[Uno Starter Kit.pdf > Page 59](../../docs/UNO%20Starter%20Kit.pdf)
 
 ### Overview
 
