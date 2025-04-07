@@ -93,3 +93,7 @@ button A is low, then a 'digitalWrite' on the ledPin turns it on.
 Similarly, if button B is pressed, a LOW is written to the ledPin.
 
 ![example](digital_inputs_3.png)
+
+## Results
+
+<video src="digital_inputs.mp4" width="640" height="360" controls></video>
