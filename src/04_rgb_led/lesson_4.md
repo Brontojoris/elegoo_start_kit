@@ -2,6 +2,8 @@
 
 ## Elegoo Lesson 4
 
+[Uno Starter Kit.pdf > Page 5](../../docs/UNO%20Starter%20Kit.pdf)
+
 ### Overview
 
 RGB LEDs are a fun and easy way to add some color to your projects. Since they are

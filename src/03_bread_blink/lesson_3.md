@@ -1,6 +1,10 @@
 # Blink
 
-## Elegoo Lesson 2
+## Elegoo Lesson 3
+
+[Uno Starter Kit.pdf > Page 43](../../docs/UNO%20Starter%20Kit.pdf)
+
+### Overview
 
 The UNO is a convenient source of 5 volts, which we will use to provide power to
 the LED and the resistor.
@@ -25,4 +29,4 @@ You will probably want to put the 220Ω resistor back in place.
 It does not matter which side of the LED we put the resistor, as long as it is there
 somewhere
 
-![elegoo_lesson_1.png](lesson_2.png)
+![elegoo_lesson_1.png](lesson_3.png)
