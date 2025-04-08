@@ -9,3 +9,4 @@
 * [Lesson 6 - Active Buzzer](src/06_active_buzzer/active_buzzer.md)
 * [Lesson 7 - Passive Buzzer](src/07_passive_buzzer/passive_buzzer.md)
 * [Lesson 8 - Tilt Ball Switch](src/08_tilt_ball_switch/tilt_ball_switch.md)
+* [Lesson 9 - Servo](src/08_tilt_ball_switch/servo.md)
