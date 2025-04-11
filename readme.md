@@ -27,4 +27,4 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](/d
 * [Lesson 12 - Temperature and Humidity Sensor](src/12_temp_sensor/temp_sensor.md)
 * [Lesson 13 - Joystick](src/13_joystick/joystick.md)
 * [Lesson 14 - IR Receiver](src/14_ir_receiver/ir.md)
-* [Lesson 15 - MAX7219 LED Dot Matrix Module](src/15_led_matrix/matrix.md)
+* [Lesson 15 - MAX7219 LED Dot Matrix Module](src/15_led_matrix/readme.md)
