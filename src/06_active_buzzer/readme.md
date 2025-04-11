@@ -46,3 +46,5 @@ and click UPLOAD to upload the program. See Lesson 2 for details about program u
 ## Result
 
 ![proof](active_buzzer.mp4)
+
+https://github.com/user-attachments/assets/418197eb-0148-456a-8cea-68957671dc06
