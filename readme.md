@@ -1,5 +1,17 @@
 # Arduino Starter Kit
 
+This is a copy of my practice at each of the lessons in the [Elegoo UNO R3 Most Complete Starter Kit](https://us.elegoo.com/products/elegoo-uno-most-complete-starter-kit?srsltid=AfmBOopwmmRRFqXMA8s_49O7t6PzQc1Nwn5HTS4Kw9S1tRvhyw10xpbw).
+
+This is a really well made kit, with easy to follow, clear instructions and quality components.
+
+![UNO R3 Most Complete Starter Kit](docs/Elegoo_UNO_R3_Most_Complete_Starter_Kit.png)
+
+I wasn't a fan of the [Ardiuno IDE](https://www.arduino.cc/en/software/), becuase it seems very single minded about having a new window for every [sketch](https://docs.arduino.cc/learn/programming/sketches/), which gets crazy when working through the 25 tutorials that come with this kit, so I've included some notes about using [Intellij CLion](https://www.jetbrains.com/clion/) and the [Platform.io](https://platformio.org) plugin to build the modify the code for each lesson.
+
+![CLion + Platform.io](docs/clion_platformio.png)
+
+Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](/docs/UNO%20Starter%20Kit.pdf), with a little bit of formatting or extra comments where I got stuck.
+
 ## Lessons
 
 * Lesson 1 - Blink
