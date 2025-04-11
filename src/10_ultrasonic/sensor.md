@@ -68,12 +68,14 @@ re-install it, if necessary. Otherwise, your code won't work.
 ### Installing the library via CLion and Platform.io
 
 1. Make a copy of the `platformio.ini` file because the procedure is gonna delete any comments or formatting you might have.
-2. Open [127.0.0.1:8008](http://127.0.0.1:8008)
-3. Login.
-4. Search for **HC-SR04** Library and add it to the project
-5. Copy the sample code to  this lesson folder.
-6. Unzip, and tidy up any files.
-7. Upload and monitor.
+2. Open the Platform.io panel
+3. Click the PlatformIO Home menu option.
+4. Open [127.0.0.1:8008](http://127.0.0.1:8008)
+5. Login. Details are in 1Password.
+6. Search for **HC-SR04 by Martin Sosic** Library and add it to the project
+7. Copy the sample code to  this lesson folder.
+8. Unzip, and tidy up any files.
+9. Upload and monitor.
 
 ## Result
 
