@@ -99,3 +99,5 @@ Similarly, if button B is pressed, a LOW is written to the ledPin.
 ## Result
 
 ![proof](digital_inputs.mp4)
+
+https://github.com/user-attachments/assets/0943f699-b91b-4038-ace0-d378a632456b
