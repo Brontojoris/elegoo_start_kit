@@ -11,5 +11,5 @@
 * [Lesson 8 - Tilt Ball Switch](src/08_tilt_ball_switch/tilt_ball_switch.md)
 * [Lesson 9 - Servo](src/09_servo/servo.md)
 * [Lesson 10 - Ultrasonic Sensor](src/10_ultrasonic/sensor.md)
-* [Lesson 11 - Membrane Switch](src/11_membrane_switch/membrane.md)
+* [Lesson 11 - Keypad Membrane Switch](src/11_keypad/keypad.md)
 *
