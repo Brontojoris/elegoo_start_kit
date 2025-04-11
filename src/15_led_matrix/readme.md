@@ -68,11 +68,4 @@ For details about loading the library file, see Lesson 1.
 
 ## Result
 
-Quick recording of the finished product:
-
-### Video 1 - Relative URL
-<video src="matrix.mp4" width="1024">Video 1 - Relative URL</video>
-
-### Video 2 - Full URL
-<video src="https://github.com/Brontojoris/elegoo_start_kit/blob/main/src/15_led_matrix/matrix.mp4" width="1024">Video 2 - Full URL</video>
-
+![proof](matrix.mp4)
