@@ -68,4 +68,4 @@ For details about loading the library file, see Lesson 1.
 
 ## Result
 
-<video src='matrix.mp4' width='1024' />
+<video src='matrix.mp4' width='1024'>matrix.mp4</video>
