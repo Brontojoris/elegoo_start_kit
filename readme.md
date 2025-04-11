@@ -13,3 +13,4 @@
 * [Lesson 10 - Ultrasonic Sensor](src/10_ultrasonic/sensor.md)
 * [Lesson 11 - Keypad Membrane Switch](src/11_keypad/keypad.md)
 * [Lesson 12 - Temperature and Humidity Sensor](src/12_temp_sensor/temp_sensor.md)
+* [Lesson 13 - Joystick](src/13_joystick/joystick.md)
