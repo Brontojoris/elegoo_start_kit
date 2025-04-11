@@ -44,3 +44,5 @@ After wiring, please open the program in the code folder - Lesson 8 Ball Switch 
 ## Result
 
 ![proof](tilt_ball_switch.mp4)
+
+https://github.com/user-attachments/assets/324ba31e-3f29-484d-9ea1-80f1463f8999
