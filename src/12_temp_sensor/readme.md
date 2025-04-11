@@ -93,3 +93,5 @@ Before you can run this, make sure that you have installed the `<SimpleDHT>` lib
 ## Result
 
 ![proof](temp_sensor.mp4)
+
+https://github.com/user-attachments/assets/c45dca50-7545-4a6c-b59f-afe155103326
