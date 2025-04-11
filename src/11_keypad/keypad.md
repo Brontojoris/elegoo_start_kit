@@ -58,7 +58,7 @@ These are the connections in a table:
 
 After wiring, please open the program in the code folder- Lesson 11 Membrane Switch Module and click UPLOAD to upload the program.
 
-See [Lesson 2](../01_blink/blink.md) for details about program uploading if there are any errors.
+See [Lesson 2](../) for details about program uploading if there are any errors.
 
 Before you can run this, make sure that you have installed the `<Keypad>` library or re-install it, if necessary. Otherwise, your code won't work
 
@@ -68,7 +68,7 @@ Before you can run this, make sure that you have installed the `<Keypad>` librar
 2. Open the Platform.io panel
 3. Click the **PlatformIO Home** menu option.
 4. Open [127.0.0.1:8008](http://127.0.0.1:8008)
-5. Login. Details are in 1Password.
+5. Login. Details are in Password Manager.
 6. Search for **Keypad by Mark Stanley and Alexander Brevig** Library and add it to the project
 7. Copy the sample code to  this lesson folder.
 8. Unzip, and tidy up any files.

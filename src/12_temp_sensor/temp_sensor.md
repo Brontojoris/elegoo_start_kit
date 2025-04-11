@@ -84,7 +84,7 @@ Before you can run this, make sure that you have installed the `<SimpleDHT>` lib
 2. Open the Platform.io panel
 3. Click the **PlatformIO Home** menu option.
 4. Open [127.0.0.1:8008](http://127.0.0.1:8008)
-5. Login. Details are in 1Password.
+5. Login. Details are in Password Manager.
 6. Search for **SimpleDHT by Winlin** and add it to the project
 7. Copy the sample code to  this lesson folder.
 8. Unzip, and tidy up any files.
