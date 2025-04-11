@@ -57,3 +57,5 @@ The range of values goes from 0 to 1024
 ## Result
 
 ![proof](joystick.mp4)
+
+https://github.com/user-attachments/assets/0227737b-c220-4b4b-9051-57d2c1e43c02
