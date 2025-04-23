@@ -1,6 +1,6 @@
 # MAX7219 LED Dot Matrix Module
 
-## Elegoo Lesson 15
+## Elegoo Lesson 16
 
 [Uno Starter Kit.pdf > Page 112](../../docs/UNO%20Starter%20Kit.pdf)
 
