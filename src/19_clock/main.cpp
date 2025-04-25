@@ -2,8 +2,7 @@
 //www.elegoo.com
 //2018.10.24
 #include <Wire.h>
-#include "DS3231.h"
-
+#include <19_clock/DS3231.h>
 
 DS3231 clock;
 RTCDateTime dt;

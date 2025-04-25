@@ -31,18 +31,11 @@ The VCC pin plugs into the 5V port, and the GND plugs into the GND port.
 
 ![Wiring diagram](clock_2.png)
 
-### Installing the library via CLion and Platform.io
+### Updating the DS3231 header
 
-1. Make a copy of the `platformio.ini` file because the procedure is gonna delete any comments or formatting you might have.
-2. Open the Platform.io panel
-3. Click the **PlatformIO Home** menu option.
-4. Open [127.0.0.1:8008](http://127.0.0.1:8008)
-5. Login. Details are in Password Manager.
-6. Search for **DS1307 by Denics Devices (Aaditya Dengle)** and add it to the project
-7. Copy the sample code to  this lesson folder.
-8. Unzip, and tidy up any files.
-9. Upload and monitor.
+1. When trying to run the provided sample files, I got a number of errors about `ISO C++ forbids converting a string constant to 'char*'`
+2. Update the file to match current coding practices using the CLion suggested fixes. See the git history for a summary of the changes.
 
 ## Result
 
-![proof](water.mp4)
+![proof](clock.mp4)
