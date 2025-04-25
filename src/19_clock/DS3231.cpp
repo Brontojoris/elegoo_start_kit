@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint8_t daysArray [] PROGMEM = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 const uint8_t dowArray[] PROGMEM = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
 
-bool DS3231::begin(void)
+bool DS3231::begin()
 {
     Wire.begin();
 
@@ -241,7 +241,7 @@ char* DS3231::dateFormat(const char* dateFormat, RTCDateTime dt)
                 break;
             case 'L':
                 sprintf(helper, "%d", isLeapYear(dt.year)); 
-                strcat(buffer, (const char *)helper); 
+                strcat(buffer, helper);
                 break;
 
             // Hour decoder
@@ -346,7 +346,7 @@ char* DS3231::dateFormat(const char* dateFormat, RTCAlarmTime dt)
                 break;
             case 'h':
                 sprintf(helper, "%02d", hour12(dt.hour));
-                strcat(buffer, (const char *)helper);
+                strcat(buffer, helper);
                 break;
             case 'g':
                 sprintf(helper, "%d", hour12(dt.hour));
@@ -381,7 +381,7 @@ char* DS3231::dateFormat(const char* dateFormat, RTCAlarmTime dt)
     return buffer;
 }
 
-RTCDateTime DS3231::getDateTime(void)
+RTCDateTime DS3231::getDateTime()
 {
     int values[7];
 
@@ -420,7 +420,7 @@ RTCDateTime DS3231::getDateTime(void)
     return t;
 }
 
-uint8_t DS3231::isReady(void) 
+uint8_t DS3231::isReady()
 {
     return true;
 }
@@ -462,7 +462,7 @@ void DS3231::setBattery(bool timeBattery, bool squareBattery)
     writeRegister8(DS3231_REG_CONTROL, value);
 }
 
-bool DS3231::isOutput(void)
+bool DS3231::isOutput()
 {
     uint8_t value;
 
@@ -486,7 +486,7 @@ void DS3231::setOutput(DS3231_sqw_t mode)
     writeRegister8(DS3231_REG_CONTROL, value);
 }
 
-DS3231_sqw_t DS3231::getOutput(void)
+DS3231_sqw_t DS3231::getOutput()
 {
     uint8_t value;
 
@@ -510,7 +510,7 @@ void DS3231::enable32kHz(bool enabled)
     writeRegister8(DS3231_REG_STATUS, value);
 }
 
-bool DS3231::is32kHz(void)
+bool DS3231::is32kHz()
 {
     uint8_t value;
 
@@ -522,7 +522,7 @@ bool DS3231::is32kHz(void)
     return value;
 }
 
-void DS3231::forceConversion(void)
+void DS3231::forceConversion()
 {
     uint8_t value;
 
@@ -535,7 +535,7 @@ void DS3231::forceConversion(void)
     do {} while ((readRegister8(DS3231_REG_CONTROL) & 0b00100000) != 0);
 }
 
-float DS3231::readTemperature(void)
+float DS3231::readTemperature()
 {
     uint8_t msb, lsb;
 
@@ -562,10 +562,10 @@ float DS3231::readTemperature(void)
     return ((((short)msb << 8) | (short)lsb) >> 6) / 4.0f;
 }
 
-RTCAlarmTime DS3231::getAlarm1(void)
+RTCAlarmTime DS3231::getAlarm1()
 {
     uint8_t values[4];
-    RTCAlarmTime a;
+    RTCAlarmTime a{};
 
     Wire.beginTransmission(DS3231_ADDRESS);
     #if ARDUINO >= 100
@@ -598,7 +598,7 @@ RTCAlarmTime DS3231::getAlarm1(void)
     return a;
 }
 
-DS3231_alarm1_t DS3231::getAlarmType1(void)
+DS3231_alarm1_t DS3231::getAlarmType1()
 {
     uint8_t values[4];
     uint8_t mode = 0;
@@ -635,15 +635,13 @@ DS3231_alarm1_t DS3231::getAlarmType1(void)
     return (DS3231_alarm1_t)mode;
 }
 
-void DS3231::setAlarm1(uint8_t dydw, uint8_t hour, uint8_t minute, uint8_t second, DS3231_alarm1_t mode, bool armed)
-{
+void DS3231::setAlarm1(uint8_t dydw, uint8_t hour, uint8_t minute, uint8_t second, DS3231_alarm1_t mode, bool armed) {
     second = dec2bcd(second);
     minute = dec2bcd(minute);
     hour = dec2bcd(hour);
     dydw = dec2bcd(dydw);
 
-    switch(mode)
-    {
+    switch (mode) {
         case DS3231_EVERY_SECOND:
             second |= 0b10000000;
             minute |= 0b10000000;
@@ -689,19 +687,19 @@ void DS3231::setAlarm1(uint8_t dydw, uint8_t hour, uint8_t minute, uint8_t secon
     }
 
     Wire.beginTransmission(DS3231_ADDRESS);
-    #if ARDUINO >= 100
-        Wire.write(DS3231_REG_ALARM_1);
-        Wire.write(second);
-        Wire.write(minute);
-        Wire.write(hour);
-        Wire.write(dydw);
-    #else
+#if ARDUINO >= 100
+    Wire.write(DS3231_REG_ALARM_1);
+    Wire.write(second);
+    Wire.write(minute);
+    Wire.write(hour);
+    Wire.write(dydw);
+#else
         Wire.send(DS3231_REG_ALARM_1);
         Wire.send(second);
         Wire.send(minute);
         Wire.send(hour);
         Wire.send(dydw);
-    #endif
+#endif
 
     Wire.endTransmission();
 
@@ -741,7 +739,7 @@ void DS3231::armAlarm1(bool armed)
     writeRegister8(DS3231_REG_CONTROL, value);
 }
 
-bool DS3231::isArmed1(void)
+bool DS3231::isArmed1()
 {
     uint8_t value;
     value = readRegister8(DS3231_REG_CONTROL);
@@ -749,7 +747,7 @@ bool DS3231::isArmed1(void)
     return value;
 }
 
-void DS3231::clearAlarm1(void)
+void DS3231::clearAlarm1()
 {
     uint8_t value;
 
@@ -759,10 +757,10 @@ void DS3231::clearAlarm1(void)
     writeRegister8(DS3231_REG_STATUS, value);
 }
 
-RTCAlarmTime DS3231::getAlarm2(void)
+RTCAlarmTime DS3231::getAlarm2()
 {
     uint8_t values[3];
-    RTCAlarmTime a;
+    RTCAlarmTime a{};
 
     Wire.beginTransmission(DS3231_ADDRESS);
     #if ARDUINO >= 100
@@ -795,7 +793,7 @@ RTCAlarmTime DS3231::getAlarm2(void)
     return a;
 }
 
-DS3231_alarm2_t DS3231::getAlarmType2(void)
+DS3231_alarm2_t DS3231::getAlarmType2()
 {
     uint8_t values[3];
     uint8_t mode = 0;
@@ -907,7 +905,7 @@ void DS3231::armAlarm2(bool armed)
     writeRegister8(DS3231_REG_CONTROL, value);
 }
 
-bool DS3231::isArmed2(void)
+bool DS3231::isArmed2()
 {
     uint8_t value;
     value = readRegister8(DS3231_REG_CONTROL);
@@ -917,7 +915,7 @@ bool DS3231::isArmed2(void)
 }
 
 
-void DS3231::clearAlarm2(void)
+void DS3231::clearAlarm2()
 {
     uint8_t value;
 
@@ -953,7 +951,7 @@ uint8_t DS3231::dec2bcd(uint8_t dec)
     return ((dec / 10) * 16) + (dec % 10);
 }
 
-char *DS3231::strDayOfWeek(uint8_t dayOfWeek)
+const char *DS3231::strDayOfWeek(uint8_t dayOfWeek)
 {
     switch (dayOfWeek) {
         case 1:
@@ -982,7 +980,7 @@ char *DS3231::strDayOfWeek(uint8_t dayOfWeek)
     }
 }
 
-char *DS3231::strMonth(uint8_t month)
+const char *DS3231::strMonth(uint8_t month)
 {
     switch (month) {
         case 1:
@@ -1026,7 +1024,7 @@ char *DS3231::strMonth(uint8_t month)
     }
 }
 
-char *DS3231::strAmPm(uint8_t hour, bool uppercase)
+const char *DS3231::strAmPm(uint8_t hour, bool uppercase)
 {
     if (hour < 12)
     {
@@ -1049,22 +1047,19 @@ char *DS3231::strAmPm(uint8_t hour, bool uppercase)
     }
 }
 
-char *DS3231::strDaySufix(uint8_t day)
+const char *DS3231::strDaySufix(uint8_t day)
 {
-    if (day % 10 == 1)
-    {
-        return "st";
-    } else
-    if (day % 10 == 2)
-    {
-        return "nd";
+    // NOTE: The original logic doesn't handle 11th, 12th, 13th correctly.
+    // A better implementation:
+    if (day >= 11 && day <= 13) {
+        return "th";
     }
-    if (day % 10 == 3)
-    {
-        return "rd";
+    switch (day % 10) {
+        case 1:  return "st";
+        case 2:  return "nd";
+        case 3:  return "rd";
+        default: return "th";
     }
-
-    return "th";
 }
 
 uint8_t DS3231::hour12(uint8_t hour24)
@@ -1136,7 +1131,7 @@ uint16_t DS3231::date2days(uint16_t year, uint8_t month, uint8_t day)
     return days16 + 365 * year + (year + 3) / 4 - 1;
 }
 
-uint32_t DS3231::unixtime(void)
+uint32_t DS3231::unixtime() const
 {
     uint32_t u;
 
