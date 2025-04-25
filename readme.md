@@ -29,3 +29,4 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 14 - IR Receiver](src/14_ir_receiver/readme.md)
 * [Lesson 15 - MAX7219 LED Dot Matrix Module](src/15_led_matrix/readme.md)
 * [Lesson 16 - MPU6050 Accelerometer and Gyroscope Module](src/16_gyroscope/readme.md)
+* [Lesson 17 - HC-SR501 PIR Sensor](src/17_pir_sensor/readme.md)
