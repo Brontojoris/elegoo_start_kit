@@ -31,6 +31,7 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 16 - MPU6050 Accelerometer and Gyroscope Module](src/16_gyroscope/readme.md)
 * [Lesson 17 - HC-SR501 PIR Sensor](src/17_pir_sensor/readme.md)
 * [Lesson 18 - Water level detection module](src/18_water_level/readme.md)
+* [Lesson 19 - Realtime Clock](src/19_clock/readme.md)
 
 
 ---
