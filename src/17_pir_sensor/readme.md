@@ -1,6 +1,6 @@
 # HC-SR501 PIR Sensor
 
-## Elegoo Lesson 15
+## Elegoo Lesson 17
 
 [Uno Starter Kit.pdf > Page 121](../../docs/UNO%20Starter%20Kit.pdf)
 
