@@ -15,23 +15,32 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 ## Lessons
 
 * Lesson 1 - Blink
-* [Lesson 3 - Blink from LED on Breadboard](src/03_bread_blink/readme.md)
-* [Lesson 4 - RGB LED](src/04_rgb_led/readme.md)
-* [Lesson 5 - Digital Inputs using push buttons](src/05_digital_inputs/readme.md)
-* [Lesson 6 - Active Buzzer](src/06_active_buzzer/readme.md)
-* [Lesson 7 - Passive Buzzer](src/07_passive_buzzer/readme.md)
-* [Lesson 8 - Tilt Ball Switch](src/08_tilt_ball_switch/readme.md)
-* [Lesson 9 - Servo](src/09_servo/readme.md)
-* [Lesson 10 - Ultrasonic Sensor](src/10_ultrasonic/readme.md)
-* [Lesson 11 - Keypad Membrane Switch](src/11_keypad/readme.md)
-* [Lesson 12 - Temperature and Humidity Sensor](src/12_temp_sensor/readme.md)
-* [Lesson 13 - Joystick](src/13_joystick/readme.md)
-* [Lesson 14 - IR Receiver](src/14_ir_receiver/readme.md)
-* [Lesson 15 - MAX7219 LED Dot Matrix Module](src/15_led_matrix/readme.md)
-* [Lesson 16 - MPU6050 Accelerometer and Gyroscope Module](src/16_gyroscope/readme.md)
+* [Lesson 3 - Blink from LED on Breadboard](src/03_bread_blink/)
+* [Lesson 4 - RGB LED](src/04_rgb_led/)
+* [Lesson 5 - Digital Inputs using push buttons](src/05_digital_inputs/)
+* [Lesson 6 - Active Buzzer](src/06_active_buzzer/)
+* [Lesson 7 - Passive Buzzer](src/07_passive_buzzer/)
+* [Lesson 8 - Tilt Ball Switch](src/08_tilt_ball_switch/)
+* [Lesson 9 - Servo](src/09_servo/)
+* [Lesson 10 - Ultrasonic Sensor](src/10_ultrasonic/)
+* [Lesson 11 - Keypad Membrane Switch](src/11_keypad/)
+* [Lesson 12 - Temperature and Humidity Sensor](src/12_temp_sensor/)
+* [Lesson 13 - Joystick](src/13_joystick/)
+* [Lesson 14 - IR Receiver](src/14_ir_receiver/)
+* [Lesson 15 - MAX7219 LED Dot Matrix Module](src/15_led_matrix/)
+* [Lesson 16 - MPU6050 Accelerometer and Gyroscope Module](src/16_gyroscope/)
 * [Lesson 17 - HC-SR501 PIR Sensor](src/17_pir_sensor/)
 * [Lesson 18 - Water level detection module](src/18_water_level/)
 * [Lesson 19 - Realtime Clock](src/19_clock/)
+* [Lesson 20 - Sound Sensor Module](src/20_sound_sensor/)
+
+## Arduino Boards
+
+### Elegoo Uno R3
 
 
----
+### ESP-WROOM-32 ESP32
+
+[Setup instructions](esp32/)
+
+![screenshot of working sketch](esp32/esp32_1.png)
