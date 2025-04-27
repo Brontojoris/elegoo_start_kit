@@ -33,6 +33,9 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 18 - Water level detection module](src/18_water_level/)
 * [Lesson 19 - Realtime Clock](src/19_clock/)
 * [Lesson 20 - Sound Sensor Module](src/20_sound_sensor/)
+* [Lesson 21 - RFID Module](src/21_rfid/)
+
+# 
 
 ## Arduino Boards
 
