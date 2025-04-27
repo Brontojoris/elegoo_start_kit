@@ -44,7 +44,7 @@ This is the board that comes with the [Elegoo UNO R3 Most Complete Starter Kit](
 
 This board integrates a variety of peripherals, including [capacitive touch sensors](https://www.youtube.com/watch?v=4YY7TutRrQE), [Hall sensors](https://www.youtube.com/watch?v=vyDZdwk76Jk), low noise amplifiers, [SD card interface](https://www.youtube.com/watch?v=e1xOgZsnAuw), [Ethernet interface](https://www.youtube.com/watch?v=_C8r7ypEB7k), and high-speed SDIO/SPI, UART, I2S, I2C, etc.
 
-[General Setup instructions](esp32/) and [Wi-Fi connection instruction](esp32/wifi.md)
+[General Setup instructions](esp32/) and [Wi-Fi connection instructions](esp32/wifi.md)
 
 ![screenshot of working sketch](esp32/esp32s_connected.png)
 
