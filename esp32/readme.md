@@ -29,6 +29,9 @@ Copy of [ESP-WROOM-32S_User_Manual.pdf](ESP-WROOM-32S_User_Manual.pdf)
 ![running blink sketch](esp32_1.png)
 
 
+### Arduino Cloud
+
+
 ### CLion + Platform.io
 
 [Platform.io listing](https://docs.platformio.org/en/latest/boards/espressif32/esp32doit-devkit-v1.html)
@@ -101,22 +104,17 @@ board_build.f_cpu = 240000000L
 | Item Model Number        | ‎2Pcs ESP-WROOM-32 Type C              |
 | Date First Available     | ‎30 May 2021                           |
 
-### Product Notes (from Amazon seller)
+### Product Notes ([from Amazon seller](https://www.amazon.com.au/dp/B0DNSNXTG2?th=1))
 
 **Note:Some of the chips have a bios that does not allow the flash mode 'QIO'. Changing it to 'QOUT' fixed it for all of them.**
 
-※ESP32 is already integrated antenna and RF balun, power amplifier, low-noise amplifiers, filters, and power management module.
-
-※The entire solution takes up the least amount of printed circuit board area
-
-※This board is used with 2.4 GHz dual-mode Wi-Fi and Bluetooth chips by TSMC 40nm low power technology, power and RF properties best, which is safe, reliable, and scalable to a variety of applications
-
-※High performance-price ratio Small volume
-
-※Easily embeded to other products Strong function with support LWIP protocol
-
-※Free rtos Supporting three modes: AP, STA, and AP+STA Supporting Lua program, easily to develop
+* ESP32 is already integrated antenna and RF balun, power amplifier, low-noise amplifiers, filters, and power management module.
+* The entire solution takes up the least amount of printed circuit board area
+* This board is used with 2.4 GHz dual-mode Wi-Fi and Bluetooth chips by TSMC 40nm low power technology, power and RF properties best, which is safe, reliable, and scalable to a variety of applications
+* High performance-price ratio Small volume
+* Easily embeded to other products Strong function with support LWIP protocol
+* Free rtos Supporting three modes: AP, STA, and AP+STA Supporting Lua program, easily to develop
 
 **You'll Receive**
 
-2Pcs ESP-WROOM-32 2.4GHz WiFi Bluetooth Development Board
+2Pcs ESP-WROOM-32 2.4GHz WiFi Bluetooth Development Board.
