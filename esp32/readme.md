@@ -10,6 +10,14 @@ Schematics and a bulletin board is available at: [DOIT ESP32 DEVKIT V1](http://b
 
 Copy of [ESP-WROOM-32S_User_Manual.pdf](ESP-WROOM-32S_User_Manual.pdf)
 
+### Pinout
+
+Pinout diagram specific to the ESP-WROOM-32S ESP32 Module that I have (They can differ!)
+
+![ESP-WROOM-32S ESP32 Module pinout](esp32s_pinout.png)
+
+*[Source](https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/)*
+
 ## Getting it working
 
 ### Arduino IDE
@@ -24,9 +32,9 @@ Copy of [ESP-WROOM-32S_User_Manual.pdf](ESP-WROOM-32S_User_Manual.pdf)
 8. From the main menu bar, click Sketch > Upload.
 9. The code should compile and upload and run on the ESP32.
 
-![arduino ide](esp32_3.png)
+![arduino ide](esp32s_arduino.png)
 
-![running blink sketch](esp32_1.png)
+![running blink sketch](esp32s_connected.png)
 
 
 ### Arduino Cloud
@@ -66,7 +74,7 @@ board_build.f_cpu = 240000000L
 
 [Amazon listing page](https://www.amazon.com.au/dp/B0DNSNXTG2)
 
-![esp32 amazon listing](esp32_2.png)
+![esp32 amazon listing](esp32s_amazon.png)
 
 ### Description
 
