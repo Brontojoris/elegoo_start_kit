@@ -36,14 +36,15 @@ Pinout diagram specific to the ESP-WROOM-32S ESP32 Module that I have (They can 
 
 ![running blink sketch](esp32s_connected.png)
 
+### ESP32 over Wi-Fi
+
+[Notes for using ESP-WROOM-32S ESP32 Module to local Wi-Fi](wifi.md)
 
 ### Arduino Cloud
-
 
 ### CLion + Platform.io
 
 [Platform.io listing](https://docs.platformio.org/en/latest/boards/espressif32/esp32doit-devkit-v1.html)
-
 
 #### Platform.io configuration
 
@@ -68,7 +69,6 @@ board_build.mcu = esp32
 ; change MCU frequency
 board_build.f_cpu = 240000000L
 ```
-
 
 ## Amazon Listing information
 
