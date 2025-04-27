@@ -42,6 +42,9 @@ Pinout diagram specific to the ESP-WROOM-32S ESP32 Module that I have (They can 
 
 ### Arduino Cloud
 
+### Arduino Cloud
+
+
 ### CLion + Platform.io
 
 [Platform.io listing](https://docs.platformio.org/en/latest/boards/espressif32/esp32doit-devkit-v1.html)
