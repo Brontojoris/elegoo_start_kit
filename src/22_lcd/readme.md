@@ -41,36 +41,78 @@ Introduction to the pins of LCD1602:
 
 ![Wiring Diagram](lcd_2.png)
 
-
-
 The LCD display needs six Arduino pins, all set to be digital outputs. It also needs 5V and GND connections.
 
 There are a number of connections to be made. Lining up the display with the top of the breadboard helps to identify its pins without too much counting, especially if the breadboard has its rows numbered with row 1 as the top row of the board.
 
 Do not forget, the long yellow lead that links the slider of the pot to pin 3 of the display. The 'pot' is used to control the contrast of the display.
 
-You may find that your display is supplied without header pins attached to it. If so, follow the instructions in the next section.
+### Code
 
+After wiring, please open the program in the code folder - Lesson 22 LCD Display and click UPLOAD to upload the program. See Lesson 2 for details about program uploading if there are any errors.
 
+Before you can run this, make sure that you have installed the `< LiquidCrystal >` library or re-install it, if necessary. Otherwise, your code won't work.
 
-| Signal    | MERC522 Reader/PCD Pin | Ar duino Uno Pin | Arduino Arduino Mega Pin | Mano v3 Pin | Ar dui no Leonardo/Micro Pin | Ar duino Pro Micro Pin |
-| --------- | ---------------------- | ---------------- | ------------------------ | ----------- | ---------------------------- | ---------------------- |
-| RST/Reset | RST                    | <br/>9           | 5                        | <br/>       | RESET/ICSP-5                 | RST                    |
-| SPI SS    | SDA (SS)               | 10               | 53                       | D10         | 10                           | 10                     |
-| SPI MOSI  | MOSI                   | 11 / ICSP-4      | 51                       | D11         | ICSP-4                       | 16                     |
-| SPI MISO  | MISO                   | 12 / ICSP-1      | 50                       | D12         | ICSP-1                       | 14                     |
-| SPI SCK   | SCK                    | 13 / ICSP-3      | 52                       | D13         | ICSP-3                       | 15                     |
+For details about loading the library file, see Lesson 1.
 
-```c
-#define RST_PIN 9 // Configurable, see typical pin layout above
-#define SS_PIN 10 // Configurable, see typical pin layout above
-```
+Upload the code to your Arduino board and you should see the message 'hello, world' displayed, followed by a number that counts up from zero.
 
-The locations of SPI pins vary with different chips, and you have to make a minor modification of the function.
+The first thing of note in the sketch is the line:
+
+`#include <LiquidCrystal.h>` This tells Arduino that we wish to use the Liquid Crystal library.
+
+Next we have the line that we had to modify. This defines which pins of the Arduino are to be connected to which pins of the display.
+
+`LiquidCrystal lcd(7, 8, 9, 10, 11, 12);` After uploading this code, make sure the backlight is lit up, and adjust the potentiometer all the way around until you see the text message In the 'setup' function, we have two commands:
+
+`lcd.begin(16, 2); lcd.print("Hello, World!");` The first tells the Liquid Crystal library how many columns and rows the display has. The second line displays the message that we see on the first line of the screen.
+
+In the 'loop' function, we aso have two commands:
+
+`lcd.setCursor(0, 1); lcd.print(millis()/1000);`
+
+The first sets the cursor position (where the next text will appear) to column 0 & row 1. Both column and row numbers start at 0 rather than 1.
+
+The second line displays the number of milliseconds since the Arduino was reset.
 
 ### Notes
 
-My walkthrough of this lesson only confirms that I can detect the keyfob and not if I can read/write/action data from the fob.
+I used [Screenduino](https://nonnullish.github.io/screenduino/) to create the code for a custom frog glyph:
+
+![Frog glyph](lcd_3.png)
+
+```cpp
+void frog() {
+    lcd.clear();
+
+    byte image22[8] = {B00010, B00100, B01000, B01000, B01001, B00100, B01111, B00000};
+    byte image06[8] = {B00000, B00001, B00010, B00010, B00100, B01000, B01000, B00100};
+    byte image07[8] = {B00000, B11011, B00100, B00000, B10001, B10001, B00000, B00000};
+    byte image08[8] = {B00000, B10000, B01000, B01000, B00100, B00010, B00010, B00100};
+    byte image23[8] = {B10001, B01110, B00000, B00000, B00000, B10001, B11111, B00000};
+    byte image24[8] = {B01000, B00100, B00010, B00010, B10010, B00100, B11110, B00000};
+
+    lcd.createChar(0, image22);
+    lcd.createChar(1, image06);
+    lcd.createChar(2, image07);
+    lcd.createChar(3, image08);
+    lcd.createChar(4, image23);
+    lcd.createChar(5, image24);
+
+    lcd.setCursor(5, 1);
+    lcd.write(byte(0));
+    lcd.setCursor(5, 0);
+    lcd.write(byte(1));
+    lcd.setCursor(6, 0);
+    lcd.write(byte(2));
+    lcd.setCursor(7, 0);
+    lcd.write(byte(3));
+    lcd.setCursor(6, 1);
+    lcd.write(byte(4));
+    lcd.setCursor(7, 1);
+    lcd.write(byte(5));
+}
+```
 
 ### Installing the library via CLion and Platform.io
 
@@ -79,7 +121,7 @@ My walkthrough of this lesson only confirms that I can detect the keyfob and not
 3. Click the **PlatformIO Home** menu option.
 4. Open [127.0.0.1:8008](http://127.0.0.1:8008)
 5. Login. Details are in Password Manager.
-6. Search for **LiquidCrystal by Adfruit** and add it to the project
+6. Search for **LiquidCrystal by Adafruit** and add it to the project
 7. Copy the sample code to  this lesson folder.
 8. Unzip, and tidy up any files.
 9. Upload and monitor.
@@ -89,4 +131,3 @@ My walkthrough of this lesson only confirms that I can detect the keyfob and not
 ![proof](lcd.mp4)
 
 https://github.com/user-attachments/assets/80e5e05a-95ee-4e3f-ae1c-945423c3f23d
-
