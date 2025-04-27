@@ -1,131 +1,84 @@
-# ESP-WROOM-32S ESP32 Module
+# Connecting ESP32 to Wi-Fi
 
-## Introduction
+These notes are paraphrased from: [Electronic Wings - ESP32 Wi-Fi Basics Getting Started](https://www.electronicwings.com/esp32/esp32-wi-fi-basics-getting-started)
 
-The ESP-WROOM-32S development board integrates a variety of peripherals, including capacitive touch sensors, Hall sensors, low noise amplifiers, SD card interface, Ethernet interface, and high-speed SDIO/SPI, UART, I2S, I2C, etc.
-
-This board was purchased from Amazon and branded as ESP-WROOM-32S ESP Board. The ultimate manufacturer is [DOIT](https://www.doit.am/).
-
-Schematics and a bulletin board is available at: [DOIT ESP32 DEVKIT V1](http://bbs.doit.am/forum.php).
-
-Copy of [ESP-WROOM-32S_User_Manual.pdf](ESP-WROOM-32S_User_Manual.pdf)
-
-### Pinout
-
-Pinout diagram specific to the ESP-WROOM-32S ESP32 Module that I have (They can differ!)
-
-![ESP-WROOM-32S ESP32 Module pinout](esp32s_pinout.png)
-
-*[Source](https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/)*
-
-## Getting it working
-
-### Arduino IDE
-
-1. Connect Arduino to PC/Mac via USB-C cable.
-2. Launch Arduino IDE.
-3. Open the Blink sketch from main menu bar > File > Examples > 01.Basics > Blink.
-4. From the main menu bar, open Tools > Board > Boards Manager.
-5. Search for "esp32".
-6. Install the version by Espressif Systems.
-7. From the main menu bar, open Tools > Boards > esp32 > DOIT ESP32 DEVKIT V1. **NOTE**: *The list is long and not in any kind of order so it can be tricky to find DOIT ESP32 DEVKIT V1.*
-8. From the main menu bar, click Sketch > Upload.
-9. The code should compile and upload and run on the ESP32.
-
-![arduino ide](esp32s_arduino.png)
-
-![running blink sketch](esp32s_connected.png)
-
-### ESP32 over Wi-Fi
-
-[Notes for using ESP-WROOM-32S ESP32 Module to local Wi-Fi](wifi.md)
-
-### Arduino Cloud
-
-### Arduino Cloud
-
-
-### CLion + Platform.io
-
-[Platform.io listing](https://docs.platformio.org/en/latest/boards/espressif32/esp32doit-devkit-v1.html)
-
-#### Platform.io configuration
-
-Please use** `esp32doit-devkit-v1` ID for board option in platformio.ini
+## Mode 1: ESP32 Wi-Fi Station
 
 ```
-[env:esp32doit-devkit-v1]
-platform = espressif32
-board = esp32doit-devkit-v1
+WiFi.mode(WIFI_STA)
 ```
 
-You can override default DOIT ESP32 DEVKIT V1 settings per build environment using `board_***` option, where `***` is a JSON object path from board manifest esp32doit-devkit-v1.json. For example, board_build.mcu, board_build.f_cpu, etc.
+In this mode, ESP32 connects to the other network
+such as a Wi-Fi router. In the connection process,
+the Wi-Fi router assigns the unique IP address to
+the ESP32.
+
+The router is connected to the internet, so we can
+request data from the internet i.e. Cloud, APIs,
+also we can send the data to the internet.
+
+## Mode 2: ESP32 Access Point
 
 ```
-[env:esp32doit-devkit-v1]
-platform = espressif32
-board = esp32doit-devkit-v1
-
-; change microcontroller
-board_build.mcu = esp32
-
-; change MCU frequency
-board_build.f_cpu = 240000000L
+WiFi.mode(WIFI_AP)
 ```
 
-## Amazon Listing information
+In Access point mode, ESP32 creates its own Wi-Fi
+network. It acts as a router and other devices can
+connect to the ESP32 like smartphones and laptops.
 
-[Amazon listing page](https://www.amazon.com.au/dp/B0DNSNXTG2)
+This mode is mentioned as soft-AP (Soft Access Point).
 
-![esp32 amazon listing](esp32s_amazon.png)
+## Mode 3: ESP32 Access point and Hotspot Mode
 
-### Description
+```
+WiFi.mode(WIFI_AP_STA)
+```
 
-* **Multiple Functions**: The ESP-WROOM-32 development board integrates a variety of peripherals, including capacitive touch sensors, Hall sensors, low noise amplifiers, SD card interface, Ethernet interface, and high-speed SDIO/SPI, UART, I2S, I2C, etc.
-* **High Performance**: The ESP32 HAT features a powerful dual-core CPU, enabling it to deliver exceptional performance for wireless WiFi and Bluetooth connectivity applications.
-* **Wireless Connectivity**: With built-in WiFi and Bluetooth capabilities, the ESP32 dual cores microcontroller allows seamless and reliable wireless communication, making it ideal for IoT projects and smart device control.
-* **Energy Efficient**: The WiFi + Bluetooth module is designed to be highly energy efficient, ensuring long battery life and reducing power consumption, making it suitable for low-power applications and portable devices.
-* **Easy Integration**: The ESP-32S board is compatible with a wide range of development platforms and programming languages, facilitating easy integration into existing projects and reducing development time.
+ESP32 acts in both modes at the same time.
 
-### Technical Details
+## ESP32 Wi-Fi Connection Status
+
+`WiFi.status()` returns one of the following values
 
 
-| Brand                    | ‎DIGISHUO                              |
-| ------------------------ | --------------------------------------- |
-| Manufacturer             | ‎DIGISHUO                              |
-| Model                    | ‎2Pcs ESP-WROOM-32 Type C              |
-| Part Number              | ‎A158A                                 |
-| Ram Memory Technology    | ‎LPDDR4                                |
-| Operating System         | ‎FreeRTOS                              |
-| Processor Brand          | ‎Espressif                             |
-| Processor Count          | ‎2                                     |
-| Compatible Devices       | ‎Arduino IDE, Various external devices |
-| Mounting Hardware        | ‎Esp8266 Module                        |
-| Number of items          | ‎2                                     |
-| Voltage                  | ‎5 Volts                               |
-| Batteries Required       | ‎No                                    |
-| Wireless Type            | ‎802.11n                               |
-| Total USB ports          | ‎1                                     |
-| Connector Type           | ‎Bluetooth, Wi-Fi                      |
-| Package Dimensions       | ‎10.2 x 9.9 x 2.2 cm; 30 Grams         |
-| Item Weight              | ‎30 g                                  |
-| Manufacturer             | ‎DIGISHUO                              |
-| ASIN                     | ‎B0DNSNXTG2                            |
-| Country/Region of origin | ‎China                                 |
-| Item Model Number        | ‎2Pcs ESP-WROOM-32 Type C              |
-| Date First Available     | ‎30 May 2021                           |
+| Constant          | Meaning                                               |
+| ----------------- | ----------------------------------------------------- |
+| WL_IDLE_STATUS    | temporary status assigned when WiFi.begin() is called |
+| WL_NO_SSID_AVAIL  | when no SSID are available                            |
+| WL_SCAN_COMPLETED | when connected to a WiFi network                      |
+| WL_CONNECTED      | when the connection fails for all the attempts        |
+| WL_CONNECT_FAILED | when the connection is lost                           |
+| WL_DISCONNECTED   | when disconnected from a network                      |
 
-### Product Notes ([from Amazon seller](https://www.amazon.com.au/dp/B0DNSNXTG2?th=1))
+## Disconnect from Wi-Fi Network
 
-**Note:Some of the chips have a bios that does not allow the flash mode 'QIO'. Changing it to 'QOUT' fixed it for all of them.**
+If we need to disconnect from Wi-Fi, Use
 
-* ESP32 is already integrated antenna and RF balun, power amplifier, low-noise amplifiers, filters, and power management module.
-* The entire solution takes up the least amount of printed circuit board area
-* This board is used with 2.4 GHz dual-mode Wi-Fi and Bluetooth chips by TSMC 40nm low power technology, power and RF properties best, which is safe, reliable, and scalable to a variety of applications
-* High performance-price ratio Small volume
-* Easily embeded to other products Strong function with support LWIP protocol
-* Free rtos Supporting three modes: AP, STA, and AP+STA Supporting Lua program, easily to develop
+```
+WiFi.disconnect();
+```
 
-**You'll Receive**
+## More Articles
 
-2Pcs ESP-WROOM-32 2.4GHz WiFi Bluetooth Development Board.
+* [ESP32 Wi-Fi Basics](https://www.electronicwings.com/esp32/esp32-wi-fi-basics-getting-started)
+* [Reconnect ESP32 to Wi-Fi Network](https://www.electronicwings.com/esp32/reconnect-esp32-to-wi-fi-network-after-lost-connection)
+* [MQTT on ESP32](https://www.electronicwings.com/esp32/esp32-mqtt-client)
+* [ESP32 Bluetooth](https://www.electronicwings.com/esp32/esp32-bluetooth-getting-started)
+* [Static IP Address](https://www.electronicwings.com/esp32/esp32-setting-static-ip-address)
+* [HTTP on ESP32](https://www.electronicwings.com/esp32/http-client-on-esp32-with-arduino-ide)
+* [ESP32 WiFi Server](https://www.electronicwings.com/esp32/how-to-create-esp32-wifi-server)
+* [Telegram Group Control LED](https://www.electronicwings.com/esp32/control-the-led-appliance-using-telegram-group-with-esp32-)
+* [Send Emails with SMTP](https://www.electronicwings.com/esp32/send-emails-using-esp32-with-smtp-server)
+* [Google Sheets](https://www.electronicwings.com/esp32/esp32-publish-sensor-readings-on-google-sheets-)
+* [Telegram Message](https://www.electronicwings.com/esp32/send-a-telegram-message-using-esp32)
+* [LED Control using Telegram](https://www.electronicwings.com/esp32/control-the-led-using-telegram-message-and-esp32)
+* [WhatsApp Message](https://www.electronicwings.com/esp32/send-a-whatsapp-message-using-esp32)
+* [ESP32 OTA](https://www.electronicwings.com/esp32/esp32-ota-programming-using-arduino-ide-)
+* [Email Temperature Alerts](https://www.electronicwings.com/esp32/temperature-alerts-on-email-using-esp32)
+* [Telegram Temperature Alert](https://www.electronicwings.com/esp32/temperature-alert-on-telegram-using-esp32)
+* [WhatsApp Temperature Alert](https://www.electronicwings.com/esp32/temperature-alert-on-whatsapp-using-esp32)
+* [Whatsapp Controlled LED](https://www.electronicwings.com/esp32/control-the-led-using-whatsapp-message-with-esp32)
+* [Temperature on Analog Gauge](https://www.electronicwings.com/esp32/analog-gauge-temperature-reading-using-esp32-server)
+* [ESP32 Web Server SPIFFS](https://www.electronicwings.com/esp32/esp32-web-server-using-spiffs-spi-flash-file-system-)
+* [ESP32 IOT Dashboard](https://www.electronicwings.com/esp32/esp32-iot-dashboard-)
