@@ -87,3 +87,6 @@ My walkthrough of this lesson only confirms that I can detect the keyfob and not
 ## Result
 
 ![proof](lcd.mp4)
+
+https://github.com/user-attachments/assets/80e5e05a-95ee-4e3f-ae1c-945423c3f23d
+
