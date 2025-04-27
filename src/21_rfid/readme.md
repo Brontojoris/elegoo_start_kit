@@ -1,6 +1,6 @@
 # RC522 RFID Module
 
-## Elegoo Lesson 20
+## Elegoo Lesson 21
 
 [Uno Starter Kit.pdf > Page 147](../../docs/UNO%20Starter%20Kit.pdf)
 
@@ -43,7 +43,6 @@ Various host interfaces are implemented:
 After wiring, please open the program in the code folder - **Lesson 21 RC522 RFID Module** and press UPLOAD to upload the program. See Lesson 2 for details about program uploading if there are any errors.
 
 Before you can run this, make sure that you have installed the < rfid > library or reinstall it, if necessary. Otherwise, your code won't work.
-
 
 
 | Signal    | MERC522 Reader/PCD Pin | Ar duino Uno Pin | Arduino Arduino Mega Pin | Mano v3 Pin | Ar dui no Leonardo/Micro Pin | Ar duino Pro Micro Pin |
