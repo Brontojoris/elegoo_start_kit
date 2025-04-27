@@ -38,9 +38,14 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 
 ### Elegoo Uno R3
 
+This is the board that comes with the [Elegoo UNO R3 Most Complete Starter Kit](https://us.elegoo.com/products/elegoo-uno-most-complete-starter-kit?srsltid=AfmBOopwmmRRFqXMA8s_49O7t6PzQc1Nwn5HTS4Kw9S1tRvhyw10xpbw).
 
 ### ESP-WROOM-32 ESP32
 
+This board integrates a variety of peripherals, including [capacitive touch sensors](https://www.youtube.com/watch?v=4YY7TutRrQE), [Hall sensors](https://www.youtube.com/watch?v=vyDZdwk76Jk), low noise amplifiers, [SD card interface](https://www.youtube.com/watch?v=e1xOgZsnAuw), [Ethernet interface](https://www.youtube.com/watch?v=_C8r7ypEB7k), and high-speed SDIO/SPI, UART, I2S, I2C, etc.
+
 [Setup instructions](esp32/)
 
-![screenshot of working sketch](esp32/esp32_1.png)
+![screenshot of working sketch](esp32/esp32s_connected.png)
+
+### Arduino Cloud
