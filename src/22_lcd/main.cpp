@@ -47,18 +47,53 @@
 // initialize the library with the numbers of the interface pins
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 
+
+void frog() {
+    lcd.clear();
+
+    byte image22[8] = {B00010, B00100, B01000, B01000, B01001, B00100, B01111, B00000};
+    byte image06[8] = {B00000, B00001, B00010, B00010, B00100, B01000, B01000, B00100};
+    byte image07[8] = {B00000, B11011, B00100, B00000, B10001, B10001, B00000, B00000};
+    byte image08[8] = {B00000, B10000, B01000, B01000, B00100, B00010, B00010, B00100};
+    byte image23[8] = {B10001, B01110, B00000, B00000, B00000, B10001, B11111, B00000};
+    byte image24[8] = {B01000, B00100, B00010, B00010, B10010, B00100, B11110, B00000};
+
+    lcd.createChar(0, image22);
+    lcd.createChar(1, image06);
+    lcd.createChar(2, image07);
+    lcd.createChar(3, image08);
+    lcd.createChar(4, image23);
+    lcd.createChar(5, image24);
+
+    lcd.setCursor(5, 1);
+    lcd.write(byte(0));
+    lcd.setCursor(5, 0);
+    lcd.write(byte(1));
+    lcd.setCursor(6, 0);
+    lcd.write(byte(2));
+    lcd.setCursor(7, 0);
+    lcd.write(byte(3));
+    lcd.setCursor(6, 1);
+    lcd.write(byte(4));
+    lcd.setCursor(7, 1);
+    lcd.write(byte(5));
+}
+
+
+
 void setup() {
-  // set up the LCD's number of columns and rows:
-  lcd.begin(16, 2);
-  // Print a message to the LCD.
-  lcd.print("Hello, World!");
+    // initialize LCD and set up the number of columns and rows:
+    lcd.begin(16, 2);
+    lcd.clear();
+    lcd.setCursor(0, 1);
+    lcd.print("Hello Barney!");
 }
 
 void loop() {
-  // set the cursor to column 0, line 1
-  // (note: line 1 is the second row, since counting begins with 0):
-  lcd.setCursor(0, 1);
-  // print the number of seconds since reset:
-  lcd.print(millis() / 1000);
+    delay(2000);
+    frog();
+    delay(2000);
+    lcd.clear();
+    lcd.setCursor(0, 1);
+    lcd.print("Hello Barney!");
 }
-
