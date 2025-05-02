@@ -36,6 +36,7 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 21 - RFID Module](src/21_rfid/)
 * [Lesson 22 - LCD Display](src/22_lcd/)
 * [Lesson 23 - Thermometer](src/23_thermometer/)
+* [Lesson 24 - 8 LEDs](src/24_leds/)
 
 ## Arduino Boards
 
@@ -52,3 +53,4 @@ This board integrates a variety of peripherals, including [capacitive touch sens
 ![screenshot of working sketch](esp32/esp32s_connected.png)
 
 ### Arduino Cloud
+
