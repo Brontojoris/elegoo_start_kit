@@ -35,6 +35,7 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 20 - Sound Sensor Module](src/20_sound_sensor/)
 * [Lesson 21 - RFID Module](src/21_rfid/)
 * [Lesson 22 - LCD Display](src/22_lcd/)
+* [Lesson 23 - Thermometer](src/23_thermometer/)
 
 ## Arduino Boards
 
