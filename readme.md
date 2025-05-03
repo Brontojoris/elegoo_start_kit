@@ -38,6 +38,7 @@ Most of the text in the lessons is copy/pasted from the [Uno Starter Kit.pdf](do
 * [Lesson 23 - Thermometer](src/23_thermometer/)
 * [Lesson 24 - 8 LEDs](src/24_leds/)
 * [Lesson 25 - Serial Monitor](src/25_serial_monitor/)
+* [Lesson 26 - Photocell](src/26_photocell/)
 
 ## Arduino Boards
 
